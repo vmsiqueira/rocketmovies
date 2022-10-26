@@ -1,7 +1,7 @@
 import { Stars } from "../Stars";
 import { Tag } from "../Tag";
 
-import { Container, Title } from "./styles";
+import { Container, Title, Description } from "./styles";
 
 export function MovieNote({ data, ...rest }) {
   return(
@@ -10,7 +10,7 @@ export function MovieNote({ data, ...rest }) {
         <Title>{data.movieName}</Title>
         <Stars 
         />
-        <p>{data.description}</p>
+        <Description>{data.description}</Description>
 
         {
           data.tags && 

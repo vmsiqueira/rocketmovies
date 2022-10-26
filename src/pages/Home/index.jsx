@@ -21,7 +21,50 @@ export function Home() {
         <MovieNote
           data={{
             movieName: "Interestelar",
-            description: "Great movie at its year of premiere",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis dui interdum augue vehicula venenatis. Duis convallis mauris erat, ut dignissim eros varius et. Quisque commodo arcu augue, sit amet elementum augue interdum quis. Sed elit mi, condimentum dapibus nisi maximus, lobortis blandit felis. Nullam erat orci, faucibus nec nulla eget, maximus pulvinar lorem. Vivamus convallis lacus sem, nec tempor est bibendum ut. Nullam ut tortor ac ligula maximus lobortis. Sed condimentum placerat mi malesuada malesuada. Curabitur et eros vitae est finibus tincidunt eget sed tortor. ",
+            tags: [
+              { id: "1", name: "Ficção" },
+              { id: "2", name: "Sci-fi" },
+            ]
+          }} 
+        />
+        <MovieNote
+          data={{
+            movieName: "Interestelar",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis dui interdum augue vehicula venenatis. Duis convallis mauris erat, ut dignissim eros varius et. Quisque commodo arcu augue, sit amet elementum augue interdum quis. Sed elit mi, condimentum dapibus nisi maximus, lobortis blandit felis. Nullam erat orci, faucibus nec nulla eget, maximus pulvinar lorem. Vivamus convallis lacus sem, nec tempor est bibendum ut. Nullam ut tortor ac ligula maximus lobortis. Sed condimentum placerat mi malesuada malesuada. Curabitur et eros vitae est finibus tincidunt eget sed tortor.",
+            tags: [
+              { id: "1", name: "Ficção" },
+              { id: "2", name: "Sci-fi" },
+            ]
+          }} 
+        />
+
+        <MovieNote
+          data={{
+            movieName: "Interestelar",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis dui interdum augue vehicula venenatis. Duis convallis mauris erat, ut dignissim eros varius et. Quisque commodo arcu augue, sit amet elementum augue interdum quis. Sed elit mi, condimentum dapibus nisi maximus, lobortis blandit felis. Nullam erat orci, faucibus nec nulla eget, maximus pulvinar lorem. Vivamus convallis lacus sem, nec tempor est bibendum ut. Nullam ut tortor ac ligula maximus lobortis. Sed condimentum placerat mi malesuada malesuada. Curabitur et eros vitae est finibus tincidunt eget sed tortor.",
+            tags: [
+              { id: "1", name: "Ficção" },
+              { id: "2", name: "Sci-fi" },
+            ]
+          }} 
+        />
+
+        <MovieNote
+          data={{
+            movieName: "Interestelar",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis dui interdum augue vehicula venenatis. Duis convallis mauris erat, ut dignissim eros varius et. Quisque commodo arcu augue, sit amet elementum augue interdum quis. Sed elit mi, condimentum dapibus nisi maximus, lobortis blandit felis. Nullam erat orci, faucibus nec nulla eget, maximus pulvinar lorem. Vivamus convallis lacus sem, nec tempor est bibendum ut. Nullam ut tortor ac ligula maximus lobortis. Sed condimentum placerat mi malesuada malesuada. Curabitur et eros vitae est finibus tincidunt eget sed tortor.",
+            tags: [
+              { id: "1", name: "Ficção" },
+              { id: "2", name: "Sci-fi" },
+            ]
+          }} 
+        />
+
+        <MovieNote
+          data={{
+            movieName: "Interestelar",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis dui interdum augue vehicula venenatis. Duis convallis mauris erat, ut dignissim eros varius et. Quisque commodo arcu augue, sit amet elementum augue interdum quis. Sed elit mi, condimentum dapibus nisi maximus, lobortis blandit felis. Nullam erat orci, faucibus nec nulla eget, maximus pulvinar lorem. Vivamus convallis lacus sem, nec tempor est bibendum ut. Nullam ut tortor ac ligula maximus lobortis. Sed condimentum placerat mi malesuada malesuada. Curabitur et eros vitae est finibus tincidunt eget sed tortor.",
             tags: [
               { id: "1", name: "Ficção" },
               { id: "2", name: "Sci-fi" },

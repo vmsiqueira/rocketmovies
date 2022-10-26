@@ -4,8 +4,16 @@ export const Container = styled.button`
   width: 100%;
   height: 3.5rem;
 
-  background-color: ${({ theme }) => theme.colors.pink};
-  color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme, isDelete }) => 
+    isDelete 
+      ? theme.colors.gray_900
+      : theme.colors.pink
+  };
+  color: ${({ theme, isDelete }) => 
+    isDelete
+    ? theme.colors.pink
+    : theme.colors.black
+  };
   font-weight: 500;
 
   border: none;
@@ -23,7 +31,7 @@ export const Container = styled.button`
     cursor: not-allowed;
   }
 
-  &+&{
+  /* &+&{
     margin-top: 1rem;
-  }
+  } */
 `;

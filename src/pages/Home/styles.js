@@ -12,7 +12,22 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 0 7.5rem 3.5rem;
+  width: calc(100% - 15rem);
+  height: calc(100vh - 20rem);
+  overflow-y: auto;
+  margin: 0 auto;
+  padding-right: 1rem;
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.pink};
+    border-radius: 0.25rem;
+  }
 `;

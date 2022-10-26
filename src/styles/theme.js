@@ -7,6 +7,7 @@ export default {
     gray_100: "#CAC4CF",
     gray_600: "#999591",
     gray_700: "#948F99",
+    gray_900: "#0D0C0F",
 
     white: "#F4EDE8",
     black: "#312E38",

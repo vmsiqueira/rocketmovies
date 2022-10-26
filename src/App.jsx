@@ -1,8 +1,8 @@
-import { Home } from "./pages/Home"
+import { NewNote } from "./pages/NewNote"
 
 export function App() {
   return (
-    <Home />
+    <NewNote />
   )
 }
 
