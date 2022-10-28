@@ -2,14 +2,14 @@ import { FiStar } from "react-icons/fi";
 
 import { Container } from "./styles";
 
-export function Stars() {
+export function Stars({ size = 12 }) {
   return(
     <Container>
-      <FiStar size={12} />
-      <FiStar size={12} />
-      <FiStar size={12} />
-      <FiStar size={12} />
-      <FiStar size={12} />
+      <FiStar size={size} />
+      <FiStar size={size} />
+      <FiStar size={size} />
+      <FiStar size={size} />
+      <FiStar size={size} />
     </Container>
   )
 }

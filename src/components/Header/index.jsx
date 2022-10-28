@@ -1,4 +1,5 @@
 import { FiSearch } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 import { Input } from "../Input";
 
@@ -7,9 +8,11 @@ import { Container, Logo, Profile } from "./styles";
 export function Header() {
   return(
     <Container>
-      <Logo>
-        RocketMovies
-      </Logo>
+      <Link to="/">
+        <Logo>
+          RocketMovies
+        </Logo>
+      </Link>
 
       <Input 
         icon={FiSearch} 
@@ -19,12 +22,19 @@ export function Header() {
 
       <Profile>
         <div className="user-data">
-          <strong>Vitor Siqueira</strong>
+          <strong>
+            <Link to="/profile">
+              Vitor Siqueira
+            </Link>
+          </strong>
+
           <button>
             sair
           </button>
         </div>
-        <img src="https://github.com/vmsiqueira.png" alt="user profile image" />
+        <Link to="/profile">
+          <img src="https://github.com/vmsiqueira.png" alt="user profile image" />
+        </Link>
       </Profile>
     </Container>
   );

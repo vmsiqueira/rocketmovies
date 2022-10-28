@@ -6,5 +6,9 @@ export const Container = styled.span`
   border-radius: 0.5rem;
   margin-right: 0.5rem;
   color: ${({ theme }) => theme.colors.white};
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme, isInDetailsPage }) => 
+  isInDetailsPage
+  ? theme.colors.pink_bg
+  : theme.colors.black
+  };
 `;

@@ -15,4 +15,17 @@ export const Container = styled.textarea`
   &::placeholder {
     color: ${({ theme }) => theme.colors.gray_700};
   }
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.pink};
+    border-radius: 0.25rem;
+  }
 `;

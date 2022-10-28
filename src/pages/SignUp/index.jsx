@@ -1,4 +1,5 @@
 import { FiMail, FiLock, FiUser, FiArrowLeft } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import backgroundImg from "../../assets/background.png";
 
 import { Input } from "../../components/Input";
@@ -34,10 +35,10 @@ export function SignUp() {
           title="Cadastrar"
         />
 
-        <a href="#">
+        <Link to="/">
           <FiArrowLeft size={16} />
           Voltar para o login
-        </a>
+        </Link>
       
       </Form>
 

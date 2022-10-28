@@ -11,10 +11,26 @@ export const Container = styled.div`
   }
 `;
 
+export const Section = styled.section`
+  margin: 2.5rem 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+`;
+
 export const Content = styled.div`
   width: calc(100% - 15rem);
   height: calc(100vh - 20rem);
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   margin: 0 auto;
   padding-right: 1rem;
 

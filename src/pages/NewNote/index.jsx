@@ -1,4 +1,5 @@
 import { FiArrowLeft } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
@@ -17,10 +18,10 @@ export function NewNote() {
       <Content>
         <Form>
           <header>
-            <a href="">
+            <Link to="/">
               <FiArrowLeft />
               Voltar
-            </a>
+            </Link>
             <h1>Novo filme</h1>
           </header>
 

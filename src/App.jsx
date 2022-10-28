@@ -1,8 +1,8 @@
-import { NewNote } from "./pages/NewNote"
+import { Routes } from "./routes";
 
 export function App() {
   return (
-    <NewNote />
+    <Routes />
   )
 }
 
