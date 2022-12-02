@@ -39,8 +39,7 @@ export const Background = styled.div`
   overflow-y: hidden;
 
   img {
-    flex: 1;
-    min-width: 803;
+    width: 1280px;
     opacity: 0.3;
   }
 `;

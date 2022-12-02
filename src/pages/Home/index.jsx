@@ -1,16 +1,36 @@
+import { useState, useEffect } from "react";
 import { FiPlus } from "react-icons/fi";
+import { api } from "../../services/api";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Header } from "../../components/Header";
 import { ButtonHome } from "../../components/ButtonHome";
 import { MovieNote } from "../../components/MovieNote";
 
 import { Container, Content, Section } from "./styles";
-import { Link } from "react-router-dom";
 
 export function Home() {
+  const [search, setSearch] = useState("");
+  const [notes, setNotes] = useState([]);
+
+  const navigate = useNavigate();
+
+  function handleDetails(id) {
+    navigate(`/details/${id}`);
+  }
+
+  useEffect(() => {
+    async function fetchNotes() {
+      const response = await api.get(`/notes?title=${search}`)
+      setNotes(response.data);
+    }
+
+    fetchNotes();
+  }, [search]);
+
   return(
     <Container>
-      <Header />
+      <Header setSearch={setSearch} />
       <hr />
 
       <Section>
@@ -21,57 +41,15 @@ export function Home() {
       </Section>
 
       <Content>
-        <Link to="/details/1">
-          <MovieNote
-            data={{
-              movieName: "Interestelar",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis dui interdum augue vehicula venenatis. Duis convallis mauris erat, ut dignissim eros varius et. Quisque commodo arcu augue, sit amet elementum augue interdum quis. Sed elit mi, condimentum dapibus nisi maximus, lobortis blandit felis. Nullam erat orci, faucibus nec nulla eget, maximus pulvinar lorem. Vivamus convallis lacus sem, nec tempor est bibendum ut. Nullam ut tortor ac ligula maximus lobortis. Sed condimentum placerat mi malesuada malesuada. Curabitur et eros vitae est finibus tincidunt eget sed tortor. ",
-              tags: [
-                { id: "1", name: "Ficção" },
-                { id: "2", name: "Sci-fi" },
-              ]
-            }} 
-          />
-        </Link>
-        
-        <Link to="/details/2">
-          <MovieNote
-            data={{
-              movieName: "Interestelar",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis dui interdum augue vehicula venenatis. Duis convallis mauris erat, ut dignissim eros varius et. Quisque commodo arcu augue, sit amet elementum augue interdum quis. Sed elit mi, condimentum dapibus nisi maximus, lobortis blandit felis. Nullam erat orci, faucibus nec nulla eget, maximus pulvinar lorem. Vivamus convallis lacus sem, nec tempor est bibendum ut. Nullam ut tortor ac ligula maximus lobortis. Sed condimentum placerat mi malesuada malesuada. Curabitur et eros vitae est finibus tincidunt eget sed tortor. ",
-              tags: [
-                { id: "1", name: "Ficção" },
-                { id: "2", name: "Sci-fi" },
-              ]
-            }} 
-          />
-        </Link>
-        
-        <Link to="/details/3">
-          <MovieNote
-            data={{
-              movieName: "Interestelar",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis dui interdum augue vehicula venenatis. Duis convallis mauris erat, ut dignissim eros varius et. Quisque commodo arcu augue, sit amet elementum augue interdum quis. Sed elit mi, condimentum dapibus nisi maximus, lobortis blandit felis. Nullam erat orci, faucibus nec nulla eget, maximus pulvinar lorem. Vivamus convallis lacus sem, nec tempor est bibendum ut. Nullam ut tortor ac ligula maximus lobortis. Sed condimentum placerat mi malesuada malesuada. Curabitur et eros vitae est finibus tincidunt eget sed tortor. ",
-              tags: [
-                { id: "1", name: "Ficção" },
-                { id: "2", name: "Sci-fi" },
-              ]
-            }} 
-          />
-        </Link>
-        
-        <Link to="/details/4">
-          <MovieNote
-            data={{
-              movieName: "Interestelar",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis dui interdum augue vehicula venenatis. Duis convallis mauris erat, ut dignissim eros varius et. Quisque commodo arcu augue, sit amet elementum augue interdum quis. Sed elit mi, condimentum dapibus nisi maximus, lobortis blandit felis. Nullam erat orci, faucibus nec nulla eget, maximus pulvinar lorem. Vivamus convallis lacus sem, nec tempor est bibendum ut. Nullam ut tortor ac ligula maximus lobortis. Sed condimentum placerat mi malesuada malesuada. Curabitur et eros vitae est finibus tincidunt eget sed tortor. ",
-              tags: [
-                { id: "1", name: "Ficção" },
-                { id: "2", name: "Sci-fi" },
-              ]
-            }} 
-          />
-        </Link>
+        {
+          notes.map(note => (
+              <MovieNote
+                key={String(note.id)}
+                data={note} 
+                onClick={() => handleDetails(note.id)}
+              />
+          ))
+        }
         
       </Content>
 

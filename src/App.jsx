@@ -1,8 +1,11 @@
 import { Routes } from "./routes";
+import { AuthProvider } from "./hooks/auth";
 
 export function App() {
   return (
-    <Routes />
+    <AuthProvider>
+      <Routes />
+    </AuthProvider>
   )
 }
 
